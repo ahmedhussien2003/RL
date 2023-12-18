@@ -59,7 +59,7 @@ public  class Dogs implements Initializable {
         dog5.setName("Molly");
         dog5.setGender("Female");
         dog5.setImgSrc("Molly.png");
-        dog5.setColor("#BAEAC3");
+        dog5.setColor("#FFCC66");
         dogs.add(dog5);
 
         dog5 = new dog();
@@ -87,7 +87,7 @@ public  class Dogs implements Initializable {
         dog5.setName("Sparky");
         dog5.setGender("Male");
         dog5.setImgSrc("Sparky.png");
-        dog5.setColor("#BAEAC3");
+        dog5.setColor("#FFCC66");
         dogs.add(dog5);
 
         dog5 = new dog();
@@ -202,7 +202,7 @@ public  class Dogs implements Initializable {
         dogGenderLabel.setText(dog5.getGender());
         image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(dog5.getImgSrc())));
         dogImg.setImage(image);
-        chosenDogCard.setStyle("-fx-background-color:#D3D3D3;\n"+"-fx-background-radius:30;");
+        chosenDogCard.setStyle("-fx-background-color:"+dog5.getColor()+";\n"+"-fx-background-radius:30;");
     }
 
     @Override

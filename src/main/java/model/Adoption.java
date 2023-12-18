@@ -1,3 +1,5 @@
+package model;
+
 public class Adoption {
     private String Appointment;
 

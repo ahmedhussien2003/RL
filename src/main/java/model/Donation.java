@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Donation {
     private String ClientName;
     private String ClientId;

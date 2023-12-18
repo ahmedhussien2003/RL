@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.Admin;
+import model.Client;
 
 public class DonoView {
 
@@ -24,9 +26,21 @@ public class DonoView {
     @FXML
     private Label label_1;
 
-
+    public void getclintinfo()
+    {
+        Client client1=new Client();
+        Admin admin1=new Admin();
+        admin1.setAdmin();
+        DonateView donateView=new DonateView();
+        client1=admin1.clientList.get(5);
+        donateView.clientinfo(client1);
+    }
     public void donate (Event event){
         try {
+
+            getclintinfo();
+
+
             Node node = (Node) event.getSource();
             Stage stage = (Stage) node.getScene().getWindow();
             stage.close();

@@ -1,9 +1,12 @@
+package model;
+
 import java.time.LocalDateTime;
 public class MoneyDonation extends Donation {
     private int Value;
-    private int CardNumber;
+    private long CardNumber;
+    private String CardName;
     private int CVV;
-    private int exp;
+    private String exp;
 
     private String Type;
 
@@ -15,11 +18,11 @@ public class MoneyDonation extends Donation {
         Value = value;
     }
 
-    public int getCardNumber() {
+    public long getCardNumber() {
         return CardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(long cardNumber) {
         CardNumber = cardNumber;
     }
 
@@ -31,12 +34,20 @@ public class MoneyDonation extends Donation {
         this.CVV = CVV;
     }
 
-    public int getExp() {
+    public String getExp() {
         return exp;
     }
 
-    public void setExp(int exp) {
+    public void setExp(String exp) {
         this.exp = exp;
+    }
+
+    public String getCardName() {
+        return CardName;
+    }
+
+    public void setCardName(String cardName) {
+        CardName = cardName;
     }
 
     @Override
@@ -44,4 +55,8 @@ public class MoneyDonation extends Donation {
         this.Type="Money";
     }
 
+
+    public String getType() {
+        return Type;
+    }
 }

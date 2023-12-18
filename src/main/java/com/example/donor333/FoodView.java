@@ -9,12 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.Client;
+import model.OtherDonation;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FoodView {
-
+    private static Client client16;
+    private static OtherDonation otherDonation1;
     @FXML
     private Button Button_1;
 
@@ -72,48 +75,62 @@ public class FoodView {
     @FXML
     private Label Label_2;
 
-    public static void main(String[]args){
-        ArrayList<String> array = new ArrayList<String>();
-        array.add("10:00am");
-        array.add("10:30am");
-        array.add("11:00am");
-        array.add("11:30am");
-        array.add("12:00pm");
-        array.add("12:30pm");
-        array.add("1:00pm");
-        array.add("1:30pm");
-        array.add("2:00pm");
-        array.add("2:30pm");
-        array.add("3:00pm");
-        array.add("3:30pm");
-        array.add("4:00pm");
-        array.add("4:30pm");
-        array.add("5:00pm");
-        array.add("5:30pm");
-
-        System.out.println("Available appointments");
-
-
-        for(int i = 0; i< array.toArray().length ; i++)
-        {
-            System.out.println(array.get(i) +" ");
-
-        }
-        System.out.println("please choose the appointment");
-
-        Scanner input=new Scanner(System.in);
-        int arraySize,searchedappo;
-        arraySize = input.nextInt();
-
-
-        if (arraySize<=15)
-
-            System.out.println(array.get(arraySize));
-        else
-            System.out.println("The appointment is not found");
-
+//    public void setAppointments(){
+//        ArrayList<String> array = new ArrayList<String>();
+//        array.add("10:00am");
+//        array.add("10:30am");
+//        array.add("11:00am");
+//        array.add("11:30am");
+//        array.add("12:00pm");
+//        array.add("12:30pm");
+//        array.add("1:00pm");
+//        array.add("1:30pm");
+//        array.add("2:00pm");
+//        array.add("2:30pm");
+//        array.add("3:00pm");
+//        array.add("3:30pm");
+//        array.add("4:00pm");
+//        array.add("4:30pm");
+//        array.add("5:00pm");
+//        array.add("5:30pm");
+//
+//        System.out.println("Available appointments");
+//
+//
+//        for(int i = 0; i< array.toArray().length ; i++)
+//        {
+//            System.out.println(array.get(i) +" ");
+//
+//        }
+//        System.out.println("please choose the appointment");
+//
+//        Scanner input=new Scanner(System.in);
+//        int arraySize,searchedappo;
+//        arraySize = input.nextInt();
+//
+//
+//        if (arraySize<=15)
+//
+//            System.out.println(array.get(arraySize));
+//        else
+//            System.out.println("The appointment is not found");
+//
+//    }
+    public void setinfo31(Client client3,OtherDonation otherDonation3)
+    {
+        //client3.setName("Ahmed");
+        System.out.println(client3.getName()+" 31");
+        System.out.println(otherDonation3.getType()+" 31");
+        FoodView.client16=client3;
+        FoodView.otherDonation1=otherDonation3;
     }
     public void appoindown (Event event){
+        AppointmentViewR A=new AppointmentViewR();
+        String App=Button_1.getText();
+        System.out.println(App);
+        FoodView.otherDonation1.setAppointment(App);
+        AppointmentViewR appointmentViewR=new AppointmentViewR();
+        appointmentViewR.checksendinfo(client16,otherDonation1);
         try {
 
             Node node = (Node) event.getSource();
@@ -145,7 +162,8 @@ public class FoodView {
 
         }
 
-    }}
+    }
+}
 
 
 

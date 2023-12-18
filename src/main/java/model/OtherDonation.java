@@ -1,3 +1,5 @@
+package model;
+
 public class OtherDonation extends Donation{
    private String Appointment;
    private String Type;

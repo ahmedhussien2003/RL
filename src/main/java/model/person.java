@@ -1,3 +1,5 @@
+package model;
+
 public abstract class person {
     private String Name;
     private String Id;

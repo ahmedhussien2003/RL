@@ -27,7 +27,7 @@
             <Font name="System Bold" size="52.0" />
          </font>
       </Label>
-      <Button layoutX="208.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#appoindown" prefHeight="54.0" prefWidth="106.0" text="10:00am">
+      <Button fx:id="Goto" layoutX="208.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#appoindown" prefHeight="54.0" prefWidth="106.0" text="10:00am">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
