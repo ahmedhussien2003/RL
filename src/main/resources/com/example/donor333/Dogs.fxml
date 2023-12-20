@@ -56,21 +56,24 @@
                      <Insets top="10.0" />
                    </VBox.margin>
                </HBox>
-               <ImageView fx:id="dogImg" fitHeight="207.0" fitWidth="153.0" layoutX="210.0" layoutY="220.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="dogImg" fitHeight="207.0" fitWidth="220.0" layoutX="210.0" layoutY="220.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
                    <image>
                        <Image url="@Molly.png" />
                    </image>
                </ImageView>
                <HBox alignment="TOP_CENTER" prefHeight="23.0" prefWidth="160.0">
                    <children>
-                       <Label opacity="0.28" prefHeight="31.0" prefWidth="132.0" text="ID : 33789456" textAlignment="CENTER" textFill="#2a2213" textOverrun="CENTER_ELLIPSIS">
+                       <Label fx:id="id" opacity="0.28" prefHeight="31.0" prefWidth="132.0" text="ID : 33789456" textAlignment="CENTER" textFill="#2a2213" textOverrun="CENTER_ELLIPSIS">
                            <font>
                                <Font name="SimHei" size="18.0" />
                            </font>
                        </Label>
                    </children>
                </HBox>
-               <Label prefHeight="52.0" prefWidth="156.0" text="A cute calm dog (descripe)" textFill="#5b5858" />
+               <Label fx:id="desc" alignment="TOP_CENTER" prefHeight="60.0" prefWidth="206.0" text="A cute calm dog (descripe)" textFill="#5b5858">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
              <Button fx:id="Adopt" mnemonicParsing="false" onMouseClicked="#appointment" prefHeight="32.0" prefWidth="123.0" text="Adopt" textFill="#5b5858">
                  <font>
                      <Font name="System Bold" size="22.0" />

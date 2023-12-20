@@ -1,7 +1,7 @@
 package com.example.donor333;
 
-import model.dog;
+import model.Pet;
 
 public interface MyListener2 {
-    public void onClickListener (dog dog5);
+    public void onClickListener (Pet dog5);
 }

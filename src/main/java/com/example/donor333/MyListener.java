@@ -1,8 +1,8 @@
 package com.example.donor333;
 
-import model.cat;
+import model.Pet;
 
 public interface MyListener {
-    public void onClickListener (cat cat5);
+    public void onClickListener (Pet cats);
 
 }

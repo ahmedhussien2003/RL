@@ -10,9 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import model.Admin;
+import model.Adoption;
 import model.Client;
 
 public class DonoView {
+    private static Client client1=new Client();
+    private static Admin admin1=new Admin();
+    DonateView donateView=new DonateView();
+
+    Choose choose=new Choose();
 
     @FXML
     private Button button_1;
@@ -25,21 +31,21 @@ public class DonoView {
 
     @FXML
     private Label label_1;
+    private static int ind;
 
-    public void getclintinfo()
+    public void getclintinfo(int index)
     {
-        Client client1=new Client();
-        Admin admin1=new Admin();
-        admin1.setAdmin();
-        DonateView donateView=new DonateView();
-        client1=admin1.clientList.get(5);
-        donateView.clientinfo(client1);
+        DonoView.ind=index;
+//        Client client1=new Client();
+//        Admin admin1=new Admin();
+//        admin1.setAdmin();
+        DonoView.client1=admin1.clientList.get(index);
     }
     public void donate (Event event){
         try {
 
-            getclintinfo();
-
+//            getclintinfo(ind);
+            donateView.clientinfo(client1);
 
             Node node = (Node) event.getSource();
             Stage stage = (Stage) node.getScene().getWindow();
@@ -56,6 +62,10 @@ public class DonoView {
 
     }
     public void Adopt (Event event){
+
+//        getclintinfo();
+        choose.setinfo(client1);
+
         try {
             Node node = (Node) event.getSource();
             Stage stage = (Stage) node.getScene().getWindow();
